@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Orbit Future Academy</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<img src={{ url_for('static', filename='/images/orbit_logo.jpg') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Orbit Future Academy</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+				<!-- <h2>Vicky - Potlot</h2> -->
+				<h2>TweetVibe</h2>
+				<h4>Tweet Anti Baper</h4><br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					Aplikasi ini dibuat untuk membantu pengguna untuk mengenali emosi yang terkandung dalam setiap tweet yang diposting di Twitter.
+					Tweet yang ada di Twitter di copy kemudian di salin ke aplikasi ini lalu Tweet tersebut akan diklasifikasikan apakah Tweet tersebut adalah
+					Tweet yang mengandung emosi kesenangan, kesedihan, kejujuran, kemarahan, maupun percintaan. Dengan Tweet Anti Baper ini, pengguna tidak
+					akan lagi gampang baper atau gampang terbawa suasana oleh Tweet tersebut, karena bisa di deteksi terlebih dahulu Tweet ini adalah Tweet
+					kesenangan, kesedihan, kejujuran atau percintaan.
+				</p>
+			    <br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#28ace5">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img src={{ url_for('static', filename='/images/app-display.png') }} width="600" ></img>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br><br>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="phone_bg1">
+					<form>
+						<div class="tweet-box">
+							<div class="tweet-box-header1">
+								<div>
+									<svg xmlns="http://www.w3.org/2000/svg" fill="white" width="15" height="15"viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+								</div>
+								<div>
+									<button type="submit" class="tweet-submit1" id="tweet-submit1">Tweet</button>
+								</div>
+							</div>
+							<div class="tweet-profile">
+								<div>
+									<svg xmlns="http://www.w3.org/2000/svg" fill="white" width="25" height="25" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+								</div>
+								<div style="margin-left:5px">
+									<a href="javascript:void(0)" class="dropdown-profile">Everyone</a>
+								</div>
+							</div>
+							<div class="tweet-input1">      																
+									<input type="text" id="tweet-input1" placeholder="What's happening?"/>																	
+							</div>
+							<div class="tweet-footer">
+								<div class="row footer flex">
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" fill="#1D9BF0" width="10" height="10" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>
+									</div>
+									<div>
+										<p class="twitter-color" style="margin-left:5px; margin-top:3px;">Everyone can reply</p>
+									</div>
+								</div>
+								<div class="row footer">
+									<div class="footer-body" style="padding-bottom:85%;">
+										<div class="chat-logs1" style="color:black;">
+
+										</div>
+									</div>
+								</div>								
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-md-6" style="margin-top: 30px;">
+				<div class="card">
+					<div class="container">
+						<h4>TweetVibe</h4>
+					</div>
+					<div class="container chat-logs2 mb-3">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class="container-fluid text-center">
+		<br>
+		<h2>ANGGOTA KELOMPOK</h2>
+		<h4>Tim Deployment dan Tim NLP</h4>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>M. Aulia Abdurrahman</h4>
+				<p>Universitas Bengkulu</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>Vicky</h4>
+				<p>Universitas Mikroskil</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>SARIFA</h4>
+				<p>Universitas Malikussaleh</p>
+			</div>
+		</div>
+	    <br>
+	    <div class="row slideanim">
+			<div class="col-sm-6">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>Juliawati</h4>
+				<p>Universitas Malikussaleh</p>
+			</div>
+			<div class="col-sm-6">
+				<span class="glyphicon glyphicon-user logo-small"></span>
+				<h4>Nur Azizah</h4>
+				<p>STIE Pembangunan Tanjungpinang</p>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
