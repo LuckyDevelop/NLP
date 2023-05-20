@@ -1,0 +1,119 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hallo",
+        "hai",
+        "halo",
+        "hei",
+        "hi",
+        "hy",
+        "pagi",
+        "morning",
+        "siang",
+        "afternoon",
+        "sore",
+        "malam",
+        "bro",
+        "sis",
+        "kawan"
+      ],
+      "responses": [
+        "Halo! Selamat datang di layanan pemesanan kami. Bagaimana saya dapat membantu Anda hari ini?",
+        "Selamat datang di layanan pemesanan kami! Bagaimana saya bisa membantu Anda hari ini?",
+        "Hai! Terima kasih telah menggunakan layanan pemesanan kami. Ada yang bisa saya bantu?",
+        "Selamat datang! Saya siap membantu Anda dalam proses pemesanan. Ada yang ingin Anda pesan?",
+        "Halo! Senang bisa membantu Anda dengan pemesanan Anda hari ini. Apa yang ingin Anda lakukan?",
+        "Selamat datang di bot pelayanan pemesanan kami. Saya siap untuk melayani kebutuhan pemesanan Anda.",
+        "Hai, apa kabar? Saya siap membantu Anda dengan segala kebutuhan pemesanan yang Anda miliki.",
+        "Selamat datang di layanan pemesanan kami! Jangan ragu untuk bertanya jika ada yang perlu Anda tanyakan.",
+        "Halo! Saya siap membantu Anda dengan pemesanan Anda. Bagaimana saya dapat memenuhi kebutuhan Anda?",
+        "Hai, selamat datang! Saya adalah bot pelayanan pemesanan yang siap membantu Anda. Apa yang dapat saya lakukan untuk Anda hari ini?",
+        "Selamat datang di bot pemesanan kami! Saya siap untuk melayani permintaan dan pesanan Anda dengan cepat dan efisien."
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "Ada menu apa?",
+        "Makanan apa yang tersedia?",
+        "Bisakah saya melihat daftar menu?"
+      ],
+      "responses": [
+        "Tentu! Berikut adalah daftar menu kami: Nasi Goreng, Ayam Bakar, Mie Ayam, Sate Ayam, Soto Ayam, Bakso, Martabak. Silakan pilih menu yang Anda inginkan."
+      ]
+    },
+    {
+      "tag": "order",
+      "patterns": [
+        "Saya ingin memesan",
+        "Bisakah saya memesan",
+        "Saya ingin pesan"
+      ],
+      "responses": [
+        "Tentu! Silakan berikan daftar pesanan Anda dan jumlahnya, serta berapa banyak yang Anda inginkan."
+      ]
+    },
+    {
+      "tag": "confirmation",
+      "patterns": [
+        "Berapa total harga pesanan saya?",
+        "Bagaimana cara pembayaran?",
+        "Saya siap untuk membayar"
+      ],
+      "responses": [
+        "Total harga pesanan Anda adalah [harga]. Pembayaran dapat dilakukan melalui transfer bank atau tunai saat pengantaran."
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "Bisakah pesanan saya diantar?",
+        "Bisakah pesanan saya dikirim?",
+        "Pesanan saya bisa dikirim?",
+        "Berapa lama pengantaran?",
+        "Apakah ada biaya pengiriman?"
+      ],
+      "responses": [
+        "Ya, kami menyediakan layanan pengantaran. Waktu pengantaran biasanya sekitar 30-45 menit. Biaya pengiriman akan tergantung pada lokasi pengantaran."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Dah",
+        "Dadah",
+        "Bye",
+        "Byee",
+        "Good bye",
+        "Selamat tinggal",
+        "Sampai jumpa",
+        "Bai",
+        "See you"
+      ],
+      "responses": [
+        "Bye!",
+        "Dadahh!",
+        "Good bye!",
+        "Dahh, semoga harimu menyenangkan yaa!",
+        "Sampai jumpa lagi!",
+        "See u! Senang bisa membantu"
+      ]
+    },
+    {
+      "tag": "terimakasih",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Terima kasih",
+        "Makasih",
+        "Terima kasih banyak"
+      ],
+      "responses": [
+        "Dengan senang hati :)",
+        "Sama-sama yaa"
+      ]
+    }
+  ]
+}
