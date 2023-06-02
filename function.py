@@ -11,7 +11,7 @@ from gtts import gTTS
 from io import BytesIO
 import tensorflow as tf
 import IPython.display as ipd
-import speech_recognition as sr 
+import speech_recognition as sr
 import matplotlib.pyplot as plt
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import Model
@@ -108,3 +108,23 @@ model.compile(loss="sparse_categorical_crossentropy", optimizer='adam', metrics=
 
 # Training the model (Latih model data sampai 400 kali)
 train = model.fit(x_train, y_train, epochs=400)
+
+# # slang word
+# slang_words = {
+#   "grg": "goreng",
+#   "grng": "goreng",
+#   "nasgor": "nasi goreng",
+#   # Tambahkan slang word dan kata normalnya di sini
+#   }
+with open('slang_words.json') as content:
+  slang_words = json.load(content)
+
+def convert_slang_to_normal(text):
+  words = text.split()
+  converted_text = []
+  for word in words:
+    if word.lower() in slang_words:
+      converted_text.append(slang_words[word.lower()])
+    else:
+      converted_text.append(word)
+  return " ".join(converted_text)
