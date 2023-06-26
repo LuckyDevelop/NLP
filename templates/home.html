@@ -277,7 +277,7 @@
                       <div class="input-group mb-3">
                         <input
                           type="text"
-                          class="form-control"
+                          class="form-control input-chat-box"
                           id="chat-input1"
                           placeholder="Let's Order Something.."
                           aria-label="Let's Order Something.."
@@ -290,7 +290,7 @@
                         >
                           <i class="bi bi-send"></i>
                         </button>
-                        <button class="btn btn-danger" type="button">
+                        <button class="btn btn-danger" id="speechButton" type="button">
                           <i class="bi bi-mic-fill"></i>
                         </button>
                       </div>
@@ -654,5 +654,6 @@
     <!-- Template Main JS File -->
     <script src="{{ url_for('static', filename='/assets/js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/function.js') }}"></script>
   </body>
 </html>
