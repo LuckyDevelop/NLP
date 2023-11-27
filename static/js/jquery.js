@@ -15,7 +15,6 @@ function handleChatSubmit(message) {
         type: "POST",
         data: { "data": msg },
         success: function (res) {
-          console.log(res);          
           if (res['type'] == 'makanan') {
             generate_menu(res['data'], getListMenu(res['type']), 'bot');
           } else if (res['type'] == 'minuman') {
@@ -23,7 +22,7 @@ function handleChatSubmit(message) {
           } else if (res['type'] == 'sidedish') {
             generate_menu(res['data'], getListMenu(res['type']), 'bot');
           } else {
-            generate_message2(res.data, 'bot');    
+            generate_message2(res.data, 'bot');
           }
         }
       });

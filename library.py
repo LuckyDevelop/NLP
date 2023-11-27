@@ -21,6 +21,8 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.layers import Input, Embedding, LSTM
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.layers import Flatten, Dense, GlobalMaxPool1D
+# from urllib import request
+import requests
 
 # Package sentence tokenizer
 nltk.download('punkt')
@@ -29,10 +31,14 @@ nltk.download('wordnet')
 # Package multilingual wordnet data
 nltk.download('omw-1.4')
 
-# Importing the dataset
-with open('dataset.json') as content:
-    data1 = json.load(content)
-
+# url = "https://dinesmart.vickyprofile.com/api/all-dataset"
+# request.urlretrieve(url, "dataset.json")
+# # Importing the dataset
+# with open('dataset.json') as content:
+#     data1 = json.load(content)
+api_url = "https://dinesmart.vickyprofile.com/api/all-dataset"
+response = requests.get(api_url)
+data1 = response.json()
 # Mendapatkan semua data ke dalam list
 tags = []  # data tag
 inputs = []  # data input atau pattern
@@ -69,7 +75,7 @@ words = [lemmatizer.lemmatize(w.lower())
 words = sorted(list(set(words)))
 
 # sort classes
-classes = sorted(list(set(classes)))
+classes = sorted(list(set(map(str, classes))))
 
 # Tokenize the data (Tokenisasi Data)
 tokenizer = Tokenizer(num_words=2000)
@@ -81,7 +87,8 @@ x_train = pad_sequences(train)
 
 # Encoding the outputs
 le = LabelEncoder()
-y_train = le.fit_transform(data['tags'])
+# y_train = le.fit_transform(data['tags'])
+y_train = le.fit_transform(data['tags'].astype(str))
 
 # input length
 input_shape = x_train.shape[1]

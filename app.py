@@ -30,15 +30,16 @@ def apiDeteksi():
         response_tag = le.inverse_transform([output])[0]
 
         if response_tag == "makanan":
-            return jsonify({
-                "data": responses[response_tag],
-                "type": response_tag
-            })
+            response_data = responses.get(response_tag, [])
+            response_type = response_tag
         else:
-            return jsonify({
-                "data": random.choice(responses[response_tag]),
-                "type": response_tag
-            })
+            response_data = random.choice(responses.get(response_tag, []))
+            response_type = response_tag
+
+        return jsonify({
+            "data": response_data,
+            "type": response_type
+        })
 # =[Main]========================================
 
 
